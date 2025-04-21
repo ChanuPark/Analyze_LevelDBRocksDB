@@ -1,0 +1,13 @@
+# 빌드 디렉토리 제외
+leveldb/build/
+rocksdb/*.so
+rocksdb/*.a
+rocksdb/db_bench
+
+# 결과 파일 제외
+results/*.txt
+
+# 기타
+*.o
+*.log
+*.db
