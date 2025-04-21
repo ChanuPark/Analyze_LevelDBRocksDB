@@ -33,8 +33,8 @@
 
 ### 1. RocksDB 빌드
 
-cd rocksdb
-make db_bench -j4
+- cd rocksdb
+- make db_bench -j4
 
 ### 2. LevelDB 빌드
 
