@@ -45,39 +45,21 @@ cmake --build .
 
 ### 3. 벤치마크 실행
 
-- RocksDB(스크립트 실행)
-# fillseq
+RocksDB(스크립트 실행)
 bash benchmark/run_fillseq_rocksdb.sh
-
-# readrandom
 bash benchmark/run_readrandom_rocksdb.sh
-
-# readseq
 bash benchmark/run_readseq_rocksdb.sh
-
-# deleterandom
 bash benchmark/run_deleterandom_rocksdb.sh
-
-# readwhilewriting
 bash benchmark/run_readwhilewriting_rocksdb.sh
 
-- LevelDB(직접 실행)
-# fillseq
+LevelDB(직접 실행)
 ./leveldb/build/db_bench fillseq
-
-# readrandom
 ./leveldb/build/db_bench readrandom
-
-# readseq
 ./leveldb/build/db_bench readseq
-
-# deleterandom
 ./leveldb/build/db_bench deleterandom
-
-# readwhilewriting
 ./leveldb/build/db_bench readwhilewriting
 
-→ 각 실험 결과는 results/ 디렉토리에 자동 저장된다 (RocksDB의 경우).
+→ 각 실험 결과는 results/ 디렉토리에 자동 저장된다 (RocksDB의 경우)
 → LevelDB의 경우는 화면에 출력되므로, 필요한 경우 별도로 리다이렉션하여 저장할 수 있다.
 
 ---
