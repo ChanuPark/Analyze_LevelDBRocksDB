@@ -38,33 +38,33 @@ make db_bench -j4
 
 ### 2. LevelDB 빌드
 
-cd leveldb
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DLEVELDB_BUILD_TESTS=OFF -DLEVELDB_BUILD_BENCHMARKS=OFF ..
-cmake --build .
+- cd leveldb
+- mkdir build && cd build
+- cmake -DCMAKE_BUILD_TYPE=Release -DLEVELDB_BUILD_TESTS=OFF -DLEVELDB_BUILD_BENCHMARKS=OFF ..
+- cmake --build .
 
 ### 3. 벤치마크 실행
 
 RocksDB(스크립트 실행)
-bash benchmark/run_fillseq_rocksdb.sh
-bash benchmark/run_readrandom_rocksdb.sh
-bash benchmark/run_readseq_rocksdb.sh
-bash benchmark/run_deleterandom_rocksdb.sh
-bash benchmark/run_readwhilewriting_rocksdb.sh
+- bash benchmark/run_fillseq_rocksdb.sh
+- bash benchmark/run_readrandom_rocksdb.sh
+- bash benchmark/run_readseq_rocksdb.sh
+- bash benchmark/run_deleterandom_rocksdb.sh
+- bash benchmark/run_readwhilewriting_rocksdb.sh
 
 LevelDB(직접 실행)
-./leveldb/build/db_bench fillseq
-./leveldb/build/db_bench readrandom
-./leveldb/build/db_bench readseq
-./leveldb/build/db_bench deleterandom
-./leveldb/build/db_bench readwhilewriting
+- ./leveldb/build/db_bench fillseq
+- ./leveldb/build/db_bench readrandom
+- ./leveldb/build/db_bench readseq
+- ./leveldb/build/db_bench deleterandom
+- ./leveldb/build/db_bench readwhilewriting
 
-→ 각 실험 결과는 results/ 디렉토리에 자동 저장된다 (RocksDB의 경우)
-→ LevelDB의 경우는 화면에 출력되므로, 필요한 경우 별도로 리다이렉션하여 저장할 수 있다.
+- → 각 실험 결과는 results/ 디렉토리에 자동 저장된다 (RocksDB의 경우)
+- → LevelDB의 경우는 화면에 출력되므로, 필요한 경우 별도로 리다이렉션하여 저장할 수 있다.
 
 ---
 
 📌 향후 계획
-	•	압축 유형 변경 (snappy, none 등)에 따른 성능 분석
-	•	compaction 전략별 차이 실험
-	•	write amplification, space amplification 측정 실험
+- 압축 유형 변경 (snappy, none 등)에 따른 성능 분석
+- compaction 전략별 차이 실험
+- write amplification, space amplification 측정 실험
